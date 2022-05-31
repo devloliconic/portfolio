@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+$font-inter: 'Inter', sans-serif;
+
+
+$gray: #F3F2F0;
+$black: #010101;
+$red: #D40000;
+$white: #FFFFFF;
+
+html{
+    font-size: 10px;
+}
 body{
-    background-color: green;
+    font-family: $font-inter;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.header{
+    padding-top: 4.1rem;
+    background-color: $gray;
+}
+.navitems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__nav{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__link{
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $black;
+        font-weight: 400;
+        line-height: 150%;
+        transition: .2s linear;
+        &:hover{
+            color: $red;
+        }
+    }
+    &__breadcrumbs{
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+    }
+    &__tel{
+        color: $black;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 150%;
+        transition: .2s linear;
+        &:hover{
+            color: $red;
+        }
+    }
+    &__mail{
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        color: $black;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 150%;
+        transition: .2s linear;
+        &:hover{
+            color: $red;
+        }
+        &::before{
+            content: "";
+            display: block;
+            width: 1px;
+            height: 24px;
+            background-color: $black;
+            opacity: 0.2;
+        }
+    }
 }
