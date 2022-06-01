@@ -152,6 +152,16 @@ body{
     }
     
 }
+.description{
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 150%;
+    color: #010101;
+    opacity: 0.8;
+    &_s{
+        font-size: 1.6rem;
+    }
+}
 .socialnav{
     display: flex;
     list-style: none;
@@ -286,11 +296,6 @@ body{
         padding-bottom: 6rem;
     }
     &__description{
-        font-weight: 400;
-        font-size: 2.8rem;
-        line-height: 150%;
-        color: #010101;
-        opacity: 0.8;
         flex-basis: 50%;
     }
     &__necessarily{
@@ -371,12 +376,6 @@ body{
             }
         }
     }
-    &__description{
-        font-size: 1.6rem;
-        line-height: 150%;
-        color: #010101;
-        opacity: 0.8;
-    }
 }
 .portfolio{
     background-color: $gray;
@@ -446,5 +445,42 @@ body{
         line-height: 150%;
         color: #010101;
         opacity: 0.8;
+    }
+    &__description{
+        margin-top: 18rem;
+        margin-bottom: 6rem;
+        max-width: 870px;
+    }
+}
+.benefits{
+    padding-top:8rem;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 8rem 9.3rem;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #010101;
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+    }
+}
+.skills{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
 }
