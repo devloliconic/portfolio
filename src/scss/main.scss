@@ -99,6 +99,9 @@ body{
     margin: 0;
     position: relative;
     z-index: 1;
+    &_s{
+        font-size: 2.8rem;
+    }
 }
 .line{
     width: 100%;
@@ -144,6 +147,7 @@ body{
 }
 .main{
     background-color: $gray;
+    padding-bottom: 18rem;
     &__cover{
         height: 310px;
         background-image: url(../img/main.jpg);
@@ -162,7 +166,7 @@ body{
         z-index: 1;
         &::before{
             content: "";
-            background-color: #FFFFFF;
+            background-color: $white;
             border-radius: 100%;
             position: absolute;
             width: 253px;
@@ -203,6 +207,7 @@ body{
         flex-wrap: wrap;
         margin-bottom: 2px;
         position: relative;
+        text-decoration: none;
         &:hover{
             &::before{
                 display: block;
@@ -234,5 +239,92 @@ body{
             order: 1;
         }
         
+    }
+    &__socialnav{
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 106px;
+            height: 106px;
+            background-color: $white;
+            border-radius: 100%;
+            z-index: -1;
+            left: 128px;
+        }
+    }
+    &__flex{
+        margin-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+        max-width: 238px;
+    }
+}
+.aboutme{
+    background-color: $gray;
+    &__flex{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 6rem;
+    }
+    &__description{
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+        flex-basis: 50%;
+    }
+    &__necessarily{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    &__blok{
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        gap: 7rem;
+        flex-grow: 1;
+    }
+    &__nvizble{
+        flex-basis: 50%;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: #010101;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    &__item{
+        flex-basis: 270px;
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #010101;
+        max-width: 270px;
+        opacity: 0.8;
+        margin: 0;
     }
 }
