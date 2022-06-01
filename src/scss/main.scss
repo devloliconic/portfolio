@@ -108,6 +108,50 @@ body{
     height: 1px;
     background-color: $black;
 }
+.discuss{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: $black;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 150%;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+    position: relative;
+    text-decoration: none;
+    &:hover{
+        &::before{
+            display: block;
+        }
+    }
+    &::after{
+        display: block;
+        content: "";
+        width: 17px;
+        height: 12px;
+        background-image:url(../img/arrow.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &::before{
+        display: none;
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        bottom: -11px;
+        left: 0;
+        width: 72%;
+        height: 2px;
+        background-color: $black;
+        box-sizing: border-box;
+        align-self:flex-end;
+        transition: .2s linear;
+        order: 1;
+    }
+    
+}
 .socialnav{
     display: flex;
     list-style: none;
@@ -195,50 +239,6 @@ body{
         justify-content: space-between;
         padding-top: 10rem;
         padding-bottom: 5.9rem;
-    }
-    &__discuss{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        color: $black;
-        font-weight: 700;
-        font-size: 1.6rem;
-        line-height: 150%;
-        flex-wrap: wrap;
-        margin-bottom: 2px;
-        position: relative;
-        text-decoration: none;
-        &:hover{
-            &::before{
-                display: block;
-            }
-        }
-        &::after{
-            display: block;
-            content: "";
-            width: 17px;
-            height: 12px;
-            background-image:url(../img/arrow.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        &::before{
-            display: none;
-            content: "";
-            position: absolute;
-            pointer-events: none;
-            bottom: -11px;
-            left: 0;
-            width: 72%;
-            height: 2px;
-            background-color: $black;
-            box-sizing: border-box;
-            align-self:flex-end;
-            transition: .2s linear;
-            order: 1;
-        }
-        
     }
     &__socialnav{
         position: relative;
@@ -332,6 +332,7 @@ body{
 }
 .meta{
     background-color: $gray;
+    padding-bottom: 18rem;
     &__text{
         display: flex;
         align-items: center;
@@ -346,6 +347,7 @@ body{
         font-size: 2.8rem;
         line-height: 150%;
         color: #010101;
+        margin: 2rem 0 2rem 0;
         &::before{
             font-weight: 400;
             font-size: 2.8rem;
@@ -371,6 +373,76 @@ body{
     }
     &__description{
         font-size: 1.6rem;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+    }
+}
+.portfolio{
+    background-color: $gray;
+    padding-bottom:16rem;
+    position: relative;
+    z-index: 1;
+    &__logo{
+        &::after{
+            display: block;
+            position: absolute;
+            content: "";
+            width: 465px;
+            height: 456px;
+            background-color: $white;
+            border-radius: 100%;
+            top: -71px;
+            right: 334px;
+            z-index: -1;
+        }
+    }
+}
+.gradient{
+    background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+}
+.exemple{
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 6.1rem;
+        padding-bottom: 6.1rem;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 150%;
+        color: #010101;
+        margin: 0;
+    }
+    &__table{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    &__img{
+        position: relative;
+        z-index: 1;
+    }
+    &__item{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+        &:nth-child(1){
+            margin-bottom: 2.2rem;
+        }
+        &:nth-child(2){
+            margin-bottom: 2.2rem;
+        }
+    }
+    &__botomtext{
+        font-weight: 700;
+        font-size: 16px;
         line-height: 150%;
         color: #010101;
         opacity: 0.8;
