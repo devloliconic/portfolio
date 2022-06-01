@@ -278,6 +278,7 @@ body{
 }
 .aboutme{
     background-color: $gray;
+    padding-bottom: 18rem;
     &__flex{
         display: flex;
         align-items: flex-start;
@@ -297,6 +298,7 @@ body{
         align-items: center;
         justify-content: space-between;
         gap: 50px;
+        margin-top: 6rem;
     }
     &__blok{
         display: grid;
@@ -326,5 +328,51 @@ body{
         max-width: 270px;
         opacity: 0.8;
         margin: 0;
+    }
+}
+.meta{
+    background-color: $gray;
+    &__text{
+        display: flex;
+        align-items: center;
+        
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        flex-basis: 50%;
+        gap: 4.5rem;
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 150%;
+        color: #010101;
+        &::before{
+            font-weight: 400;
+            font-size: 2.8rem;
+            line-height: 150%;
+            color: #010101;
+        }
+        &_1{
+            &::before{
+                content: "01";
+            }
+            
+        }
+        &_2{
+            &::before{
+                content: "02";
+            }
+        }
+        &_3{
+            &::before{
+                content: "03";
+            }
+        }
+    }
+    &__description{
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
     }
 }
