@@ -153,6 +153,7 @@ body{
     
 }
 .description{
+    margin: 0;
     font-weight: 400;
     font-size: 2.8rem;
     line-height: 150%;
@@ -479,8 +480,123 @@ body{
     }
 }
 .skills{
+    padding-bottom: 7rem;
     &__grid{
+        padding-top: 18rem;
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        
+    }
+    &__box{
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba($black,.3);
+        
+        &:hover{
+            .skills__img{
+                filter: grayscale(0%);
+            }
+        }
+    }
+    &__img{
+        transition: .2s;
+        filter: grayscale(100%); 
+    }
+}
+.price{
+    &__logo{
+        position: relative;
+        z-index: 1;
+        flex-grow: 1;
+        &::before{
+            content: "";
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            background-color: $white;
+            position: absolute;
+            top: -22px;
+            left: -57px;
+            z-index: -1;
+        }
+    }
+    &__flex{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 6rem;
+        margin-top: 6rem;
+    }
+    &__aboutproject{
+        flex-basis: 50%;
+    }
+    &__description{
+        flex-basis: 50%;
+    }
+    &__title{
+        margin: 0;
+        font-weight: 400;
+        font-size: 2.8rem;
+        line-height: 150%;
+        color: #010101;
+        max-width: 371px;
+        margin-bottom: 2rem;
+    }
+    &__subtitle{
+        margin: 0;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: #010101;
+        opacity: 0.8;
+        margin-bottom: 7.5rem;
+    }
+    &__about{
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: #010101;
+
+    }
+    &__table{
+        margin: 0;
+        padding: 0;
+        list-style: inside;
+        margin-bottom: 4rem;
+    }
+    &__item{
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 200%;
+        color: #010101;
+        opacity: 0.8;
+    }
+    &__tag{
+        margin: 0;
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 150%;
+        color: #010101;
+        
+        &_bouble{
+            position: relative;
+            z-index: 1;
+            &::before{
+                position: absolute;
+                content: "";
+                width: 90px;
+                height: 90px;
+                background-color: $white;
+                border-radius: 100%;
+                z-index: -1;
+                top: -12px;
+                left: -44px;
+            }
+        }
+
     }
 }
