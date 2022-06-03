@@ -8,6 +8,7 @@ $gray: #F3F2F0;
 $black: #010101;
 $red: #D40000;
 $white: #FFFFFF;
+$lightred: #EA0E00;
 
 html{
     font-size: 10px;
@@ -26,6 +27,29 @@ body{
     padding-top: 4.1rem;
     background-color: $gray;
     padding-bottom: 6rem;
+    &__phone{
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__openburger{
+        width: 26px;
+        height: 20px;
+        border: 0;
+        background-color: transparent;
+        background-image: url(../img/burger.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__tel{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 150%;
+        text-transform: capitalize;
+        color: $black;
+    }
 }
 .navitems{
     display: flex;
@@ -121,6 +145,7 @@ body{
     line-height: 150%;
     position: relative;
     text-decoration: none;
+    cursor: pointer;
     &:hover{
         &::before{
             display: block;
@@ -723,6 +748,10 @@ body{
         line-height: 150%;
         color: rgba($black, .2);
         margin-bottom: 2rem;
+        &:hover, &:focus, &:active{
+            outline: 0;
+            outline-offset: 0;
+        }
     }
     &__btn{
         display: block;
@@ -731,12 +760,16 @@ body{
         font-weight: 700;
         font-size: 1.6rem;
         line-height: 150%;
-        background-color: $red;
+        background-color: $lightred;
         text-align: center;
         border: 0;
         width: 100%;
         padding: 2.1rem 0 2rem 0;
-
+        transition: .2s all linear;
+        cursor: pointer;
+        &:hover{
+            background-color: $red;
+        }
     }
 }
 .drop{
@@ -872,12 +905,13 @@ body{
     }
 }
 .burger{
-    display: none;
+    padding-top: 40px;
     position: absolute;
-    top: 0;
+    top: -800px;
     right: 0;
     left: 0;
-    bottom: 0;
+    box-sizing: border-box;
+    background-color: $white;
     &__close{
         display: block;
         margin-left: auto;
@@ -912,4 +946,61 @@ body{
         justify-content: center;
     }
 
+}
+.modalwindow{
+    max-width: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin:40px auto 0px auto;
+    background-color: $gray;
+    padding-top: 1rem;
+    padding-bottom:6rem ;
+    &__close{
+        display: block;
+        margin-left: auto;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 1.5rem;
+        background-image: url(../img/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        background-color: transparent;
+        border: 0;
+    }
+    &__title{
+        margin: 0;
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $black;  
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    &__subtitle{
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 150%;
+        text-align: center;
+        color: $black;
+        margin-bottom: 3rem;
+    }
+    &__card{
+        margin-top: 4rem;
+    }
+}
+.popup{
+    display: none;
+    width:100%;
+    height: 2000px;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    z-index: 1;
 }

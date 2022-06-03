@@ -9,18 +9,22 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="navitems">
+            <div class="navitems header__navitems">
                 <ul class="navitems__nav">
-                    <li class="navitems__item"><a class="navitems__link" href="#">Обо мне</a></li>
-                    <li class="navitems__item"><a class="navitems__link" href="#">Портфолио</a></li>
-                    <li class="navitems__item"><a class="navitems__link" href="#">Этапы работ</a></li>
-                    <li class="navitems__item"><a class="navitems__link" href="#">Цены</a></li>
-                    <li class="navitems__item"><a class="navitems__link" href="#">Обратная связь</a></li>
+                    <li class="navitems__item"><a class="navitems__link" href="#aboutMe">Обо мне</a></li>
+                    <li class="navitems__item"><a class="navitems__link" href="#portfolioBlock">Портфолио</a></li>
+                    <li class="navitems__item"><a class="navitems__link" href="#stepsWork">Этапы работ</a></li>
+                    <li class="navitems__item"><a class="navitems__link" href="#priceBlok">Цены</a></li>
+                    <li class="navitems__item"><a class="navitems__link" href="#sendBlok">Обратная связь</a></li>
                 </ul>
                 <div class="navitems__breadcrumbs">
                     <a class="navitems__tel" href="tel:+79237777777">8 923 777-77-77</a>
                     <a class="navitems__mail" href="mailto:">babichevZXC@gmail.com</a>
                 </div>
+            </div>
+            <div class="header__phone">
+                <a class="header__tel" href="tel:+79237777777">8 923 777-77-77</a>
+                <button id="openburger" class="header__openburger"></button>
             </div>
         </div>
     </header>
@@ -32,7 +36,7 @@
                 <p class="main__name">Иван Бабичев</p>
                 <h2 class="logo">web-разработчик</h2>
                 <div class="main__header">
-                    <a href="#" class="discuss">Обсудить проект</a>
+                    <p class="discuss">Обсудить проект</p>
                     <ul class="socialnav main__socialnav">
                         <li class="socialnav__item"><a class="socialnav__link socialnav__link_slash" href="https://vk.com/smite322">Vk</a></li>
                         <li class="socialnav__item"><a class="socialnav__link socialnav__link_slash" href="https://www.instagram.com/divinedisfavor/">Instagram</a></li>
@@ -61,7 +65,7 @@
             </div>
         </div>
     </main>
-    <section class="aboutme">
+    <section id="aboutMe" class="aboutme">
         <div class="container">
             <div class="aboutme__flex">
                 <h3 class="logo logo_s">Обо мне</h3>
@@ -91,7 +95,7 @@
             </div>
         </div>
     </section>
-    <section class="meta">
+    <section id="stepsWork" class="meta">
         <div class="container">
             <div class="line"></div>
             <div class="meta__text">
@@ -111,7 +115,7 @@
             <div class="line"></div>
         </div>
     </section>
-    <div class="portfolio">
+    <div id="portfolioBlock" class="portfolio">
         <div class="container">
             <h2 class="logo portfolio__logo">Портфолио</h2>
         </div>
@@ -259,7 +263,7 @@
                 </div>
             </div>
         </section>
-        <section class="price">
+        <section id="priceBlok" class="price">
             <div class="container">
                 <div class="price__flex">
                     <h3 class="logo logo_s price__logo">Тарифы</h3>
@@ -270,7 +274,7 @@
                     <div class="price__text">
                         <h3 class="price__title">Разработка лэндинга&nbsp;или&nbsp;сайт&nbsp;визитки</h3>
                         <p class="price__subtitle">Небольшой сайт состоящий из одной страницы</p>
-                        <a href="#" class="discuss">Обсудить проект</a>
+                        <p  class="discuss">Обсудить проект</p>
                     </div>
                     <div class="price__aboutproject">
                         <h3 class="price__about">Что входит</h3>
@@ -287,7 +291,7 @@
                     <div class="price__text">
                         <h3 class="price__title">Разработка корпоративного сайта</h3>
                         <p class="price__subtitle">Небольшой сайт с n-количеством страниц</p>
-                        <a href="#" class="discuss">Обсудить проект</a>
+                        <p class="discuss">Обсудить проект</p>
                     </div>
                     <div class="price__aboutproject">
                         <h3 class="price__about">Что входит</h3>
@@ -304,7 +308,7 @@
                     <div class="price__text">
                         <h3 class="price__title">Разработка интернет&nbsp;-&nbsp;магазина</h3>
                         <p class="price__subtitle">Полноценный каталог вашей продукции</p>
-                        <a href="#" class="discuss">Обсудить проект</a>
+                        <p class="discuss">Обсудить проект</p>
                     </div>
                     <div class="price__aboutproject">
                         <h3 class="price__about">Что входит</h3>
@@ -318,7 +322,7 @@
                 </div>
             </div>
         </section>
-        <section class="sending">
+        <section id="sendBlok" class="sending">
             <div class="container">
                 <div class="sending__flex">
                     <h2 class="sending__title">Расскажите о&nbspсвоем проекте</h2>
@@ -388,9 +392,9 @@
             </div>
         </footer>
     </main>
-    <div class="burger">
+    <div id="burgerMenu" class="burger">
         <div class="container">
-            <button class="burger__close"></button>
+            <button id="closeBurger" class="burger__close"></button>
             <div class="line"></div>
             <a href="#" class="burger__link">Обо мне</a>
             <div class="line"></div>
@@ -411,6 +415,47 @@
                 <li class="socialnav__item"><a class="socialnav__link socialnav__link_slash" href="https://www.instagram.com/divinedisfavor/">Instagram</a></li>
                 <li class="socialnav__item"><a class="socialnav__link" href="#">Linkedin</a></li>
             </ul>
+        </div>
+    </div>
+    <div id="popUp" class="popup">
+        <div class="modalwindow">
+            <div class="container">
+                <button id="closepopup" class="modalwindow__close"></button>
+                <h3 class="modalwindow__title">Расскажите о своем проекте</h3>
+                <p class="modalwindow__subtitle">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+                <div class="line"></div>
+                <div class="card modalwindow__card">
+                    <form>
+                        <p class=" card__label">Телефон или почта</p>
+                        <input class="card__input" placeholder="Введите телефон">
+                        <p class="card__label">Выберите удобный способ связи</p>
+                        <label class="drop">
+                            <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
+                            <span class="control">Telegram</span> <!-- Fake button -->
+                      
+                            <!-- Items -->
+                            <ul class="drop-items">
+                              <li class="item-drop">
+                                <a target="_blank"
+                                   href="#">WhatsApp</a></li>
+                              <li class="item-drop">
+                                <a target="_blank"
+                                   href="#">Viber</a></li>
+                              <li class="item-drop">
+                                <a target="_blank"
+                                   href="#">Звонок на телефон</a></li>
+                              <li class="item-drop">
+                                <a target="_blank"
+                                   href="#">SMS сообщение</a></li>
+                            </ul>
+                      
+                            <!-- Alternative to close dropdown with click out -->
+                            <label for="target-drop-example" class="overlay-close"></label>
+                          </label>
+                          <button class="card__btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>
