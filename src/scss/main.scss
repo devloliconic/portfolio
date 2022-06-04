@@ -57,6 +57,8 @@ body{
         padding: 0;
         @media (max-width: $r_tab_900) {
             gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
         }
         @media (max-width: $r_tab_768) {
             gap: 2rem;
@@ -77,6 +79,9 @@ body{
         display: flex;
         align-items: center;
         gap: 1.3rem;
+        @media(max-width: $r_tab_900){
+         justify-content: center;
+        }
     }
 
     &__tel{
@@ -177,7 +182,7 @@ body{
 .discuss{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1.6rem;
     max-width: 200px;
     color: $black;
     font-weight: 700;
@@ -187,6 +192,11 @@ body{
     position: relative;
     text-decoration: none;
     cursor: pointer;
+
+    @media(max-width: $r_tab_900){
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
     &:hover{
         &::before{
             display: block;
@@ -522,6 +532,9 @@ body{
     padding-bottom:16rem;
     position: relative;
     z-index: 1;
+    @media(max-width: $r_desk_1120){
+        padding-bottom: 10rem;
+    }
     &__logo{
         &::after{
             display: block;
@@ -534,6 +547,12 @@ body{
             top: -71px;
             right: 334px;
             z-index: -1;
+            @media(max-width: $r_desk_1120){
+                width: 265px;
+                height: 256px;
+                top: -44px;
+                right: 426px;
+            }
         }
     }
 }
@@ -547,6 +566,9 @@ body{
         justify-content: space-between;
         padding-top: 6.1rem;
         padding-bottom: 6.1rem;
+      //  @media(max-width: $r_desk_1120){
+       //     display: block;
+       // }
     }
     &__title{
         font-weight: 700;
@@ -565,6 +587,10 @@ body{
     &__img{
         position: relative;
         z-index: 1;
+        @media(max-width: $r_desk_1120){
+            display: block;
+            width: 60%;
+        }
     }
     &__item{
         font-weight: 400;
@@ -590,6 +616,9 @@ body{
         margin-top: 18rem;
         margin-bottom: 6rem;
         max-width: 870px;
+        @media(max-width: $r_tab_900){
+            margin-top: 10rem;
+        }
     }
 }
 .benefits{
@@ -725,8 +754,18 @@ body{
         padding-bottom: 6rem;
         margin-top: 6rem;
     }
-    &__aboutproject{
+    &__text{
         flex-basis: 50%;
+        @media(max-width: $r_tab_900){
+            flex-basis: 25%;
+        }
+    }
+    &__aboutproject{
+        flex-grow: 1;
+        @media(max-width: $r_tab_900){
+            flex-grow: 0;
+            flex-basis: 40%;
+        }
     }
     &__description{
         flex-basis: 50%;
@@ -739,6 +778,9 @@ body{
         color: $black;
         max-width: 371px;
         margin-bottom: 2rem;
+        @media(max-width: $r_tab_900){
+            font-size: 2.2rem;
+        }
     }
     &__subtitle{
         margin: 0;
@@ -748,6 +790,9 @@ body{
         color: $black;
         opacity: 0.8;
         margin-bottom: 7.5rem;
+        @media(max-width: $r_tab_900){
+            margin-bottom: 4rem;
+        }
     }
     &__about{
         margin: 0;
@@ -776,7 +821,9 @@ body{
         font-size: 4.2rem;
         line-height: 150%;
         color: $black;
-        
+        @media(max-width: $r_tab_900){
+            font-size: 3rem;
+        }
         &_bouble{
             position: relative;
             z-index: 1;
@@ -790,6 +837,9 @@ body{
                 z-index: -1;
                 top: -12px;
                 left: -44px;
+                @media(max-width: $r_tab_900){
+                    top: -23px;
+                }
             }
         }
 
@@ -802,6 +852,9 @@ body{
         align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 6rem;
+        @media(max-width: $r_tab_768){
+            display: block;
+        }
     }
     &__title{
         margin: 0;
@@ -815,6 +868,9 @@ body{
         flex-grow: 1;
         position: relative;
         z-index: 1;
+        @media(max-width: $r_tab_900){
+            margin-bottom: 2rem;
+        }
         &::before{
             content: "";
             background-color: $white;
@@ -825,6 +881,13 @@ body{
             z-index: -1;
             top: -44px;
             left: -157px;
+            @media(max-width: $r_tab_900){
+                width: 150px;
+                height: 150px;
+                background-color: $white;
+                top: -60px;
+                left: -92px;
+            }
         }
         &::after{
             content: "";
@@ -838,10 +901,21 @@ body{
             z-index: 0;
             top: -21px;
             left: -178px;
+            @media(max-width: $r_tab_900){
+                background-size: 50px 54px;
+                width: 55px;
+                height: 74px;
+                top: 45px;
+                left: -37px;
+            }
         }
     }
     &__socialnav{
         flex-grow: 1;
+        @media(max-width: $r_tab_900){
+            flex-grow: 0;
+            justify-content: center;
+        }
     }
     &__description{
         flex-basis: 50%;
@@ -852,9 +926,17 @@ body{
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @media(max-width: $r_tab_900){
+            flex-direction: column-reverse;
+            align-items:stretch;
+            gap: 6rem;
+        }
     }
     &__card{
         flex-basis: 50%;
+        @media(max-width: $r_tab_900){
+            flex-basis: 100%;
+        }
     }
 }
 .card{
@@ -1007,20 +1089,32 @@ body{
     &__navitems{
         margin-top: 6.1rem;
         margin-bottom: 4.1rem;
+        @media(max-width: $r_tab_900){
+            display: block;
+        }
     }
     &__text{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media(max-width: $r_tab_900){
+            text-align: center;
+            display: block;
+        }
     }
     &__copy{
+        margin: 0;
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 150%;
         color: $black;
         opacity: 0.3;
+        @media(max-width: $r_tab_900){
+            margin-bottom: 1.5rem;
+        }
     }
     &__author{
+        margin: 0;
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 150%;
