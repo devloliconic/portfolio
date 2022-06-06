@@ -61,7 +61,7 @@ body{
             margin-bottom: 3rem;
         }
         @media (max-width: $r_tab_768) {
-            gap: 2rem;
+            gap: 1.8rem;
         }
     }
     &__link{
@@ -71,6 +71,10 @@ body{
         font-weight: 400;
         line-height: 150%;
         transition: .2s linear;
+        @media(max-width: $r_mob_600){
+            font-size: 1rem;
+
+        }
         &:hover{
             color: $red;
         }
@@ -80,7 +84,10 @@ body{
         align-items: center;
         gap: 1.3rem;
         @media(max-width: $r_tab_900){
-         justify-content: center;
+            justify-content: center;
+        }
+        @media(max-width: $r_mob_600){
+            order: -1;
         }
     }
 
@@ -317,6 +324,7 @@ body{
         margin-bottom: 13rem;
         @media(max-width: $r_tab_900){
             margin-bottom: 10rem;
+            height: 215px;
         }
     }
     &__name{
@@ -836,6 +844,9 @@ body{
             }
             .skills__tooltips{
                 display: block;
+                @media(max-width: $r_mob_600){
+                    display: none;
+                }
             }
         }
     }
@@ -901,6 +912,10 @@ body{
             top: -22px;
             left: -57px;
             z-index: -1;
+            @media(max-width: $r_mob_600){
+                top: -36px;
+                left: -90px;
+            }
         }
     }
     &__flex{
@@ -910,13 +925,20 @@ body{
         padding-bottom: 6rem;
         margin-top: 6rem;
         @media(max-width: $r_mob_600){
-            margin-top:0;
+            display: grid;
+            grid-template-columns: 40% 50%;
+            gap: 2rem;
+        }
+        &:nth-child(1){
+            @media(max-width: $r_mob_600){
+                display: block;
+            }
         }
     }
     &__text{
         flex-basis: 50%;
         @media(max-width: $r_tab_900){
-            flex-basis: 25%;
+            flex-basis: 40%;
         }
     }
     &__aboutproject{
@@ -925,9 +947,16 @@ body{
             flex-grow: 0;
             flex-basis: 40%;
         }
+        @media(max-width: $r_mob_600){
+            flex-basis: inherit; 
+        }
     }
     &__description{
         flex-basis: 50%;
+        @media(max-width: $r_mob_600){
+            z-index: 1;
+            position: relative;
+        }
     }
     &__title{
         margin: 0;
@@ -939,6 +968,10 @@ body{
         margin-bottom: 2rem;
         @media(max-width: $r_tab_900){
             font-size: 2.2rem;
+        }
+        @media(max-width: $r_mob_600){
+            font-size: 1.6rem;
+
         }
     }
     &__subtitle{
@@ -952,6 +985,11 @@ body{
         @media(max-width: $r_tab_900){
             margin-bottom: 4rem;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            min-height: 64px;
+        }
     }
     &__about{
         margin: 0;
@@ -959,6 +997,10 @@ body{
         font-size: 1.6rem;
         line-height: 150%;
         color: $black;
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
 
     }
     &__table{
@@ -966,6 +1008,11 @@ body{
         padding: 0;
         list-style: inside;
         margin-bottom: 4rem;
+        list-style: none;
+        @media(max-width: $r_mob_600){
+            margin-bottom: 3rem;
+            min-height: 94px;
+        }
     }
     &__item{
         font-weight: 400;
@@ -973,6 +1020,9 @@ body{
         line-height: 200%;
         color: $black;
         opacity: 0.8;
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+        }
     }
     &__tag{
         margin: 0;
@@ -982,6 +1032,9 @@ body{
         color: $black;
         @media(max-width: $r_tab_900){
             font-size: 3rem;
+        }
+        @media(max-width: $r_mob_600){
+            font-size: 2.2rem;
         }
         &_bouble{
             position: relative;
@@ -999,6 +1052,12 @@ body{
                 @media(max-width: $r_tab_900){
                     top: -23px;
                 }
+                @media(max-width: $r_mob_600){
+                    width: 40px;
+                    height: 40px;
+                    left: -10px;
+                    top: 0px;
+                }
             }
         }
 
@@ -1006,6 +1065,9 @@ body{
 }
 .sending{
     margin-bottom: 13rem;
+    @media(max-width: $r_mob_500){
+        margin-bottom:6rem;
+    }
     &__flex{
         display: flex;
         align-items: flex-start;
@@ -1027,6 +1089,10 @@ body{
         flex-grow: 1;
         position: relative;
         z-index: 1;
+        @media(max-width: $r_mob_600){
+            font-size: 1.6rem;
+            max-width: 200px;
+        }
         @media(max-width: $r_tab_900){
             margin-bottom: 2rem;
         }
@@ -1067,6 +1133,13 @@ body{
                 top: 45px;
                 left: -37px;
             }
+            @media(max-width: $r_mob_600){
+                top: -48px;
+                left: 4px;
+                background-size: 32px 30px;
+                width: 31.3px;
+                height: 39px;
+            }
         }
     }
     &__socialnav{
@@ -1077,6 +1150,8 @@ body{
         }
     }
     &__description{
+        position: relative;
+        z-index: 1;
         flex-basis: 50%;
         opacity: 1;
     }
@@ -1090,6 +1165,10 @@ body{
             align-items:stretch;
             gap: 6rem;
         }
+        @media(max-width: $r_mob_600){
+            margin-top: 4rem;
+        }
+        
     }
     &__card{
         flex-basis: 50%;
@@ -1249,7 +1328,14 @@ body{
         margin-top: 6.1rem;
         margin-bottom: 4.1rem;
         @media(max-width: $r_tab_900){
-            display: block;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        @media(max-width: $r_mob_600){
+            margin-bottom:3rem;
+            margin-top: 4rem;
         }
     }
     &__text{
@@ -1271,6 +1357,9 @@ body{
         @media(max-width: $r_tab_900){
             margin-bottom: 1.5rem;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1rem;
+        }
     }
     &__author{
         margin: 0;
@@ -1278,6 +1367,9 @@ body{
         font-size: 1.2rem;
         line-height: 150%;
         color: rgba($black, .3);
+        @media(max-width: $r_mob_600){
+            font-size: 1rem;
+        }
     }
     &__frontend{
         color: $black;
