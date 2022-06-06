@@ -175,6 +175,10 @@ body{
     
     &_s{
         font-size: 2.8rem;
+        @media(max-width: $r_mob_600){
+            line-height: 50px;
+            font-size: 1.6rem;
+        }
     }
 }
 .line{
@@ -533,6 +537,9 @@ body{
 .meta{
     background-color: $gray;
     padding-bottom: 18rem;
+    @media(max-width: $r_mob_600){
+        padding-bottom: 4rem;
+    }
     &__text{
         display: flex;
         align-items: center;
@@ -560,11 +567,19 @@ body{
             flex-basis: 30%;
             gap: 2rem;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1.6rem;
+            display: block;
+        }
         &::before{
             font-weight: 400;
             font-size: 2.8rem;
             line-height: 150%;
             color: $black;
+            @media(max-width: $r_mob_600){
+                font-size: 1.6rem;
+                margin-right: 1rem;
+            }
         }
         &_1{
             &::before{
@@ -588,6 +603,10 @@ body{
         @media(max-width: $r_tab_900){
             flex-basis: 40%;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+            
+        }
         
     }
 }
@@ -599,6 +618,10 @@ body{
     @media(max-width: $r_desk_1120){
         padding-bottom: 10rem;
     }
+    @media(max-width: $r_mob_600){
+        padding-bottom: 5rem;
+    }
+    
     &__logo{
         &::after{
             display: block;
@@ -617,6 +640,12 @@ body{
                 top: -44px;
                 right: 426px;
             }
+            @media(max-width: $r_mob_600){
+                width: 197px;
+                height: 197px;
+                top: -33px;
+                right: 95px;
+            }
         }
     }
 }
@@ -630,9 +659,11 @@ body{
         justify-content: space-between;
         padding-top: 6.1rem;
         padding-bottom: 6.1rem;
-      //  @media(max-width: $r_desk_1120){
-       //     display: block;
-       // }
+        @media(max-width: $r_mob_600){
+            display: block;
+            padding-bottom: 4rem;
+            padding-top: 4rem;
+        }
     }
     &__title{
         font-weight: 700;
@@ -640,6 +671,9 @@ body{
         line-height: 150%;
         color: $black;
         margin: 0;
+        @media(max-width: $r_mob_600){
+            font-size: 1.6rem;
+        }
     }
     &__table{
         list-style:none;
@@ -647,6 +681,10 @@ body{
         padding: 0;
         margin-top: 4rem;
         margin-bottom: 4rem;
+        @media(max-width: $r_mob_600){
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
     }
     &__img{
         position: relative;
@@ -655,6 +693,9 @@ body{
             display: block;
             width: 60%;
         }
+        @media(max-width: $r_mob_600){
+            width: 100%;
+        }
     }
     &__item{
         font-weight: 400;
@@ -662,11 +703,20 @@ body{
         line-height: 150%;
         color: $black;
         opacity: 0.8;
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+        }
         &:nth-child(1){
             margin-bottom: 2.2rem;
+            @media(max-width: $r_mob_600){
+                margin-bottom: 1.8rem;
+            }
         }
         &:nth-child(2){
             margin-bottom: 2.2rem;
+            @media(max-width: $r_mob_600){
+                margin-bottom: 1.8rem;
+            }
         }
     }
     &__botomtext{
@@ -675,6 +725,11 @@ body{
         line-height: 150%;
         color: $black;
         opacity: 0.8;
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
     }
     &__description{
         margin-top: 18rem;
@@ -683,10 +738,17 @@ body{
         @media(max-width: $r_tab_900){
             margin-top: 10rem;
         }
+        @media(max-width: $r_mob_600){
+            margin-top:8rem;
+            margin-bottom:4rem;
+        }
     }
 }
 .benefits{
     padding-top:8rem;
+    @media(max-width: $r_mob_600){
+        padding-top: 4rem;
+    }
     &__grid{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -696,6 +758,10 @@ body{
         }
         @media(max-width: $r_desk_1120){
             grid-template-columns: repeat(2,1fr);
+        }
+        @media(max-width: $r_mob_600){
+            grid-template-columns: repeat(1,1fr);
+            gap: 3rem;
         }
     }
     &__box{
@@ -713,6 +779,15 @@ body{
         @media(max-width: $r_desk_1280){
             font-size: 1.4rem;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+        }
+    }
+    &__img{
+        @media(max-width: $r_mob_600){
+            width: 30px;
+            height: 30px;
+        }
     }
     &__subtitle{
         font-weight: 400;
@@ -727,12 +802,18 @@ body{
         @media(max-width: $r_desk_1120){
             max-width: 300px;
         }
+        @media(max-width: $r_mob_600){
+            font-size: 1.2rem;
+        }
     }
 }
 .skills{
     padding-bottom: 7rem;
-    &__grid{
-        padding-top: 18rem;
+    padding-top: 18rem;
+    @media(max-width: $r_mob_600){
+        padding-top:6rem;
+    }
+    &__grid{    
         display: grid;
         grid-template-columns: repeat(4,1fr);
         
@@ -745,6 +826,10 @@ body{
         align-items: center;
         border: 1px solid rgba($black,.3);
         position: relative;
+        @media(max-width: $r_mob_600){
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
         &:hover{
             .skills__img{
                 filter: grayscale(0%);
@@ -758,6 +843,10 @@ body{
         transition: .2s;
         filter: grayscale(100%); 
         z-index: -1;
+        @media(max-width: $r_mob_600){
+            width: 30px;
+            height: 30px;
+        }
     }
     &__tooltips{
         display: none;
@@ -770,7 +859,10 @@ body{
         background-repeat: no-repeat;
         background-position: center center;
         bottom: -64%;
-        z-index: 1;
+        @media(max-width: $r_mob_600){
+            bottom: -248%;
+        }
+        z-index: 2;
     }
     &__title{
         margin-top: 3.5rem;
@@ -817,6 +909,9 @@ body{
         justify-content: space-between;
         padding-bottom: 6rem;
         margin-top: 6rem;
+        @media(max-width: $r_mob_600){
+            margin-top:0;
+        }
     }
     &__text{
         flex-basis: 50%;
