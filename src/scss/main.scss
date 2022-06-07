@@ -5,6 +5,7 @@ $font-inter: 'Inter', sans-serif;
 
 
 $gray: #F3F2F0;
+$input_gray: #E7E6E4;
 $black: #010101;
 $red: #D40000;
 $white: #FFFFFF;
@@ -36,9 +37,6 @@ body{
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    @media(max-width: $r_desk_1280){
-        max-width: 1000px;
-    }
 
 }
 .navitems{
@@ -147,6 +145,7 @@ body{
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
+        cursor: pointer;
     }
     &__tel{
         text-decoration: none;
@@ -215,7 +214,7 @@ body{
     }
     &:hover{
         &::before{
-            display: block;
+            opacity: 1;
         }
     }
     &::after{
@@ -229,7 +228,8 @@ body{
         background-repeat: no-repeat;
     }
     &::before{
-        display: none;
+        display: block;
+        opacity: 0;
         content: "";
         position: absolute;
         pointer-events: none;
@@ -336,11 +336,11 @@ body{
         margin-bottom: 5.3rem;
         z-index: 1;
         @media(max-width: $r_tab_900){
-            margin-bottom: 4rem;
+            margin-bottom: 0;
             font-size: 2rem;
         }
         @media(max-width: $r_mob_600){
-            margin-bottom: 2rem;
+            margin-bottom: 0;
         }
         &::before{
             content: "";
@@ -374,15 +374,14 @@ body{
             left: -151px;
             
             @media(max-width: $r_tab_900){
-                background-size: 50px 54px;
-                width: 55px;
-                height: 74px;
-                top: 18px;
-                left: -45px;
+                background-size: 60px 41px;
+                top: 100px;
+                left: -10px;
             }
             @media(max-width: $r_mob_600){
+                background-size: 60px 41px;
                 top: 94px;
-                left: -25px;
+                left: -10px;
             }
         }
     }
@@ -424,7 +423,7 @@ body{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             box-sizing: border-box;
-            gap: 5rem;
+            gap: 2rem 0;
         }
         @media(max-width: $r_mob_600){
             margin-top: 4rem;
@@ -453,10 +452,12 @@ body{
         margin: 0;
         margin-top: 1.5rem;
         @media(max-width: $r_desk_1120){
-            max-width: 200px;
+            max-width: 250px;
         }
         @media(max-width: $r_mob_600){
             font-size: 1rem;
+            max-width: 200px;
+            min-height: 45px;
         }
     }
 }
@@ -497,7 +498,7 @@ body{
         display: grid;
         grid-template-columns: repeat(2,1fr) ;
         gap: 7rem;
-        flex-grow: 1;
+        flex-basis: 50%;
         @media(max-width: $r_tab_900){
             gap: 5rem;
         }
@@ -506,7 +507,6 @@ body{
         }
     }
     &__nvizble{
-        flex-basis: 50%;
         @media(max-width: $r_tab_900){
             display: none;
         }
@@ -571,7 +571,7 @@ body{
             gap: 2rem;
         }
         @media(max-width: $r_tab_900){
-            font-size: 2rem;
+            font-size: 1.5rem;
             flex-basis: 30%;
             gap: 2rem;
         }
@@ -609,11 +609,12 @@ body{
     &__description{
         margin: 0;
         @media(max-width: $r_tab_900){
-            flex-basis: 40%;
+            flex-basis: 60%;
+            font-size: 1.3rem;
         }
         @media(max-width: $r_mob_600){
             font-size: 1.2rem;
-            
+            flex-basis: 40%;
         }
         
     }
@@ -836,13 +837,38 @@ body{
         align-items: center;
         border: 1px solid rgba($black,.3);
         position: relative;
+        &:nth-child(1){
+            border-right:0 ;
+        }
+        &:nth-child(2){
+            border-right:0 ;
+        }
+        &:nth-child(3){
+            border-right:0 ;
+        }
+        &:nth-child(5){
+            border-top: 0;
+            border-right: 0;
+        }
+        &:nth-child(6){
+            border-top: 0;
+            border-right: 0;
+        }
+        &:nth-child(7){
+            border-top: 0;
+            border-right: 0;
+        }
+        &:nth-child(8){
+            border-top: 0;
+        }
         @media(max-width: $r_mob_600){
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
         &:hover{
             .skills__img{
-                filter: grayscale(0%);
+                -webkit-filter: grayscale(0%);
+                        filter: grayscale(0%);
             }
             .skills__tooltips{
                 display: block;
@@ -854,7 +880,8 @@ body{
     }
     &__img{
         transition: .2s;
-        filter: grayscale(100%); 
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%); 
         z-index: -1;
         @media(max-width: $r_mob_600){
             width: 30px;
@@ -1194,12 +1221,12 @@ body{
         padding: 2.4rem 0 2.3rem 2rem;
         width: 100%;
         box-sizing: border-box;
-        background-color: #E7E6E4;
+        background-color: $input_gray;
         border: none;
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 150%;
-        color: rgba($black, .2);
+        color: $black;
         margin-bottom: 2rem;
         &:hover, &:focus, &:active{
             outline: 0;
@@ -1404,6 +1431,7 @@ body{
         background-position: center center;
         background-color: transparent;
         border: 0;
+        cursor: pointer;
     }
     &__link{
         margin-top: 2rem;
