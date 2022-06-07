@@ -423,11 +423,11 @@ body{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             box-sizing: border-box;
-            gap: 2rem 0;
+            gap: 5rem 2rem;
         }
         @media(max-width: $r_mob_600){
             margin-top: 4rem;
-            gap: 3rem;
+            gap: 3rem 2.5rem;
         }
         
     }
@@ -452,11 +452,10 @@ body{
         margin: 0;
         margin-top: 1.5rem;
         @media(max-width: $r_desk_1120){
-            max-width: 250px;
+            max-width: 100%;
         }
         @media(max-width: $r_mob_600){
             font-size: 1rem;
-            max-width: 200px;
             min-height: 45px;
         }
     }
@@ -479,6 +478,9 @@ body{
     }
     &__description{
         flex-basis: 50%;
+        @media(max-width: $r_tab_900){
+            flex-basis: 49%;
+        }
         @media(max-width: $r_mob_600){
             margin-top: 2rem;
         }
@@ -500,7 +502,7 @@ body{
         gap: 7rem;
         flex-basis: 50%;
         @media(max-width: $r_tab_900){
-            gap: 5rem;
+            gap: 5rem 2rem;
         }
         @media(max-width: $r_mob_600){
             gap: 3rem 2.5rem;
@@ -535,7 +537,7 @@ body{
         opacity: 0.8;
         margin: 0;
         @media(max-width: $r_tab_900){
-            max-width: 250px;
+            max-width: 100%;
         }
         @media(max-width: $r_mob_600){
             font-size: 1rem;
@@ -668,7 +670,7 @@ body{
         justify-content: space-between;
         padding-top: 6.1rem;
         padding-bottom: 6.1rem;
-        @media(max-width: $r_mob_600){
+        @media(max-width: $r_tab_768){
             display: block;
             padding-bottom: 4rem;
             padding-top: 4rem;
@@ -697,12 +699,22 @@ body{
             margin-bottom: 2rem;
         }
     }
-    &__img{
+    &__cover{
         position: relative;
         z-index: 1;
         @media(max-width: $r_desk_1120){
             display: block;
-            width: 60%;
+            flex-basis: 60%;
+        }
+        @media(max-width: $r_tab_768){
+            //width: 100%;
+        }
+    }
+    &__img{
+        position: relative;
+        z-index: 1;
+        @media(max-width: $r_desk_1120){
+            width: 100%;
         }
         @media(max-width: $r_mob_600){
             width: 100%;
@@ -982,6 +994,9 @@ body{
     }
     &__description{
         flex-basis: 50%;
+        @media(max-width: $r_tab_900){
+            flex-basis: 40%;
+        }
         @media(max-width: $r_mob_600){
             z-index: 1;
             position: relative;
