@@ -345,30 +345,16 @@
                             <p class="card__label">Телефон или почта</p>
                             <input class="card__input" placeholder="Введите телефон">
                             <p class="card__label">Выберите удобный способ связи</p>
-                            <label class="drop">
-                                <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-                                <span class="control">Telegram</span> <!-- Fake button -->
-                          
-                                <!-- Items -->
-                                <ul class="drop-items">
-                                  <li class="item-drop">
-                                    <a target="_blank"
-                                       href="#">WhatsApp</a></li>
-                                  <li class="item-drop">
-                                    <a target="_blank"
-                                       href="#">Viber</a></li>
-                                  <li class="item-drop">
-                                    <a target="_blank"
-                                       href="#">Звонок на телефон</a></li>
-                                  <li class="item-drop">
-                                    <a target="_blank"
-                                       href="#">SMS сообщение</a></li>
+                            <div id="select" class="select">
+                                <button  id="cardBtn" type="button" class="select__result">Telegram</button>
+                                <ul id="dropDown" class="select__body">
+                                    <li class="select__item">WhatsApp</li>
+                                    <li class="select__item">Viber</li>
+                                    <li class="select__item">Звонок на телефон</li>
+                                    <li class="select__item">SMS сообщение</li>
                                 </ul>
-                          
-                                <!-- Alternative to close dropdown with click out -->
-                                <label for="target-drop-example" class="overlay-close"></label>
-                              </label>
-                              <button class="card__btn">Отправить</button>
+                            </div>
+                            <button class="card__btn">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -434,30 +420,16 @@
                         <p class=" card__label">Телефон или почта</p>
                         <input class="card__input" placeholder="Введите телефон">
                         <p class="card__label">Выберите удобный способ связи</p>
-                        <label class="drop">
-                            <input type="checkbox" id="target-drop-example"> <!-- Toggle Drop -->
-                            <span class="control">Telegram</span> <!-- Fake button -->
-                      
-                            <!-- Items -->
-                            <ul class="drop-items">
-                              <li class="item-drop">
-                                <a target="_blank"
-                                   href="#">WhatsApp</a></li>
-                              <li class="item-drop">
-                                <a target="_blank"
-                                   href="#">Viber</a></li>
-                              <li class="item-drop">
-                                <a target="_blank"
-                                   href="#">Звонок на телефон</a></li>
-                              <li class="item-drop">
-                                <a target="_blank"
-                                   href="#">SMS сообщение</a></li>
+                        <div class="select">
+                            <button id="cardBtnModal" type="button" class="select__result">Telegram</button>
+                            <ul id="dropDownModal" class="select__body">
+                                <li class="select__item">WhatsApp</li>
+                                <li class="select__item">Viber</li>
+                                <li class="select__item">Звонок на телефон</li>
+                                <li class="select__item">SMS сообщение</li>
                             </ul>
-                      
-                            <!-- Alternative to close dropdown with click out -->
-                            <label for="target-drop-example" class="overlay-close"></label>
-                          </label>
-                          <button class="card__btn">Отправить</button>
+                        </div>
+                        <button class="card__btn">Отправить</button>
                     </form>
                 </div>
             </div>

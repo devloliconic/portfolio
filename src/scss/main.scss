@@ -1285,105 +1285,47 @@ body{
         }
     }
 }
-.drop{
-    display:block;
+.select{
     position: relative;
-    text-align: center;
-    width: 100%;
-    background-color:#E7E6E4;
-    input[type="checkbox"]{
-      display:none;
-      &:checked{
-        ~.drop-items{
-          opacity:1;
-          max-height: 400px;
-          padding: .6rem 0;
-        }
-        ~.control{       
-          z-index:99;
-          box-shadow:0 0 0 2px lighten($gray, 20);
-          &:after{transform: rotate(180deg);}
-        }
-        ~.overlay-close{
-          transform: none;
-          pointer-events:initial;
-        }
-      }
-    }
-    
-    .control{
-        position: relative;
-        color: $black;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        padding: 2.4rem 3rem 2.3rem 2rem;
-        font-weight: 400;
+    margin-bottom: 4rem;
+    &__result{
+        display: block;
         font-size: 1.2rem;
-        line-height: 150%;
+        color: $black;
         width: 100%;
-        background-color: #E7E6E4;
-        box-sizing: border-box;
-        transition: all .3s ease;   
-      &:after{
-        content:"";
-        display:block;      
-        height:12px;
-        width:7px;
-        background-image: url("../img/litlearrow.svg");
-        background-repeat:no-repeat;
-        background-position: center;
-        background-size: contain;      
-        transition: transform .3s ease;
-      }
-    }
-    
-    .drop-items{
-      position: absolute;
-      top: calc(100% + .4rem);    
-      width: 100%;
-      padding:0;
-      margin:0;
-      transition: all .3s ease;    
-      background-color:#E7E6E4;
-      overflow:hidden;
-      max-height:0;
-      opacity:1;
-      z-index:99;
-      text-align: start;
-      .item-drop{
-        list-style:none;
-        a{        
-          display:block;
-          background-color: #E7E6E4;   
-          text-decoration: none;
-          padding: .6rem;
-          transition: all .3s ease;
-          font-weight: 400;
-          font-size: 1.2rem;
-          line-height: 150%;
-          color: rgba($black, 0.4);
-          @media (hover: hover) {
-            &:hover{
-                color: rgba($black, 1);
-            }          
-          }
+        background: #E7E6E4;
+        padding: 2.4rem 2rem;
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 0;
+        &::after{
+            content: "";
+            display: block;
+            background-image: url(../img/litlearrow.svg);
+            width: 12px;
+            height: 7px;
+            transition: .3s;
         }
-      }
     }
-    
-    .overlay-close{
-      position: fixed;    
-      top:0;
-      left:0;
-      bottom:0;
-      right:0;
-      z-index:9;
-      transform: translate(100%,0);
-      pointer-events:none;
+    &__body{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        background: #E7E6E4;
+        position: absolute;
+        display: none;
     }
-  }
+    &__item{
+        font-size: 1.2rem;
+        color: rgba($black,.4);
+        padding: 0 0 2rem 2rem;
+        transition: .3s;
+        cursor: pointer;
+    }
+}
 .footer{
     padding-bottom: 4rem;
     &__navitems{
