@@ -62,7 +62,9 @@ body{
             gap: 1.3rem;
         }
         @media(max-width: $r_mob_360){
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
         }
     }
     &__link{
